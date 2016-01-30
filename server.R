@@ -41,6 +41,7 @@ library(shiny)
 shinyServer(
 function(input, output){
   output$inputValue <- renderPrint(input$Fruit)
+  output$comp_number <- renderPrint(length(unique(data_trunc[data_trunc$food_name == input$Fruit,4])))
   output$prediction <- renderTable(data_trunc[data_trunc$food_name == input$Fruit,c(4,6)])
 }
 )
