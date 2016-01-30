@@ -14,7 +14,7 @@ The left column contains the full names of the chemical constituents present, an
 When you are done reading the table, you can select another fruit from the drop-down menu and click "submit" again to repeat the process as many times as desired.
 
 #Grading Rubric
-Input widget: drop-down menu
-Operation on ui input: calculates number of compounds in selection
-Output: looks up corresponding compound and health data, converts to a table, and prints the output
-Documentation: See above "About" and "How to use" sections
+-Input widget: drop-down menu
+-Operation on ui input: calculates number of compounds in selection
+-Output: looks up corresponding compound and health data, converts to a table, and prints the output
+-Documentation: See above "About" and "How to use" sections
