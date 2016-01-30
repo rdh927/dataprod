@@ -36,16 +36,17 @@ data <- foods_comps5
 data_trunc <- unique(subset(data, food_name == "Kiwi" | food_name =="Pineapple" | food_name == "Custard apple" |
                               food_name == "Star fruit" | food_name == "Papaya" | food_name == "Strawberry" |
                               food_name == "Tamarind"))
+                              readme <- print("The app is designed to be very simple. To use it, simply choose a fruit of interest from the drop-down menu and click submit.
+                You will then see an output consisting of a large table with two columns.The left column contains the full names of the chemical 
+                constituents present, and the right column lists the known health effects associated with each compound. Since many compounds 
+                have mutiple health effects, they appear multiple times in the table, but with a different health effect for each entry. When 
+                you are done reading the table, you can select another fruit from the drop-down menu and click submit again to repeat the process 
+                as many times as desired.")
 ## here is the app part
 library(shiny)
 shinyServer(
 function(input, output){
-output$documentation <-renderprint("The app is designed to be very simple. To use it, simply choose a fruit of interest from the drop-down menu and click submit.
-                                     You will then see an output consisting of a large table with two columns.The left column contains the full names of the chemical 
-                                     constituents present, and the right column lists the known health effects associated with each compound. Since many compounds 
-                                     have mutiple health effects, they appear multiple times in the table, but with a different health effect for each entry. When 
-                                     you are done reading the table, you can select another fruit from the drop-down menu and click submit again to repeat the process 
-                                     as many times as desired.")
+output$documentation <-renderprint(readme)
   output$inputValue <- renderPrint(input$Fruit)
   output$comp_number <- renderPrint(length(unique(data_trunc[data_trunc$food_name == input$Fruit,4])))
   output$prediction <- renderTable(data_trunc[data_trunc$food_name == input$Fruit,c(4,6)])
