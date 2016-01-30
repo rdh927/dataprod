@@ -23,6 +23,8 @@ shinyUI(
   mainPanel(
     h4('You entered'),
     verbatimTextOutput("inputValue"),
+    h4('The number of compounds in that fruit is: '),
+    verbatimTextOutput("comp_number"),
     h4('Which has the following compounds and health effects: '),
     tableOutput("prediction")
   )
