@@ -1,7 +1,7 @@
 # dataprod
 
 #About
-This file contains the supporting documentation for my app. This app is a prototype that will allow anyone who is interested in 
+This file contains the supporting documentation for my app. This app allows anyone who is interested in 
 the chemical constituents of their food to learn about the potential risks or benefits of their favorite foods. 
 
 For simplicity, this app only contains seven types of fruit, but in future iterations I hope to expand the available choices to include more types of food (vegetables, spices, animal products, etc.).
