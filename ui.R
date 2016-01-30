@@ -18,7 +18,8 @@ shinyUI(
   sidebarPanel(
     selectInput(inputId = 'Fruit', label = 'fruit', choices= c('Kiwi', 'Pineapple', 'Custard apple', 'Star fruit', 
                 'Papaya', 'Strawberry', 'Tamarind'), selected = 'Kiwi', multiple=FALSE, selectize=TRUE),
-    submitButton('Submit')
+    submitButton('Submit'),
+    verbatimTextOutput("documentation")
   ),
   mainPanel(
     h4('You entered'),
