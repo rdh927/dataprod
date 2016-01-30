@@ -10,6 +10,7 @@ health_effects <- read.csv("compounds_health_effects.csv")
 comp_foods <- read.csv("compounds_foods.csv")
 
 # remove unnecessary cols in prep for merge
+fruits <- subset(all_foods, food_group == "Fruits")
 fruits2 <- fruits[,1:2]
 compounds2 <- compounds[,c(1,2,5)]
 comp_foods2 <- comp_foods[,c(2,3,5)]
