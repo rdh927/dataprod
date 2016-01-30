@@ -22,11 +22,14 @@ shinyUI(
     verbatimTextOutput("documentation")
   ),
   mainPanel(
-    h4('You entered'),
-    verbatimTextOutput("inputValue"),
-    h4('The number of compounds in that fruit is: '),
-    verbatimTextOutput("comp_number"),
-    h4('This fruit has the following compounds and health effects: '),
-    tableOutput("prediction")
+    tabsetPanel(
+      tabPanel("Documentation", verbatimTextOutput("documentation")), 
+      tabPanel("Results", h4('You entered'),
+               verbatimTextOutput("inputValue"),
+               h4('The number of compounds in that fruit is: '),
+               verbatimTextOutput("comp_number"),
+               h4('This fruit has the following compounds and health effects: '),
+               tableOutput("prediction"))
+    
   )
-))
+)))
