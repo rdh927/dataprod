@@ -2,7 +2,6 @@
 #DDP Course Project
 #Input food, get out chemical constituents and their potential health effects
 
-setwd("C:/Users/Rachel/Documents/R Programming/data_prod")
 # read in foods
 all_foods <- read.csv("foods.csv")
 compounds <- read.csv("compounds.csv")
