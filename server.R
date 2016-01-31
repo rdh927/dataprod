@@ -44,7 +44,7 @@ readme <- print("The app is designed to be very simple. To use it, simply choose
                 constituents present, and the right column lists the known health effects associated with each compound. Since many compounds 
                 have mutiple health effects, they appear multiple times in the table, but with a different health effect for each entry. When 
                 you are done reading the table, you can select another fruit from the drop-down menu and click submit again to repeat the process 
-                as many times as desired.")
+                as many times as desired."),
 function(input, output){
 output$documentation <-renderprint(readme)
   output$inputValue <- renderPrint(input$Fruit)
